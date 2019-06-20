@@ -1,6 +1,6 @@
 node {
     stage('checkout') {
-   git 'https://github.com/varaprasadt/DemoProject.git'
+   git 'https://github.com/varaprasadt/DemoRepo.git'
 }
 stage('CI') {
    dir('Demo') {
