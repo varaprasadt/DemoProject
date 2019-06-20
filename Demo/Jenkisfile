@@ -1,0 +1,11 @@
+node {
+    stage('checkout') {
+   git 'https://github.com/varaprasadt/DemoProject.git'
+}
+stage('CI') {
+   dir('Demo') {
+    bat 'mvn clean package install'
+}
+}
+
+}
