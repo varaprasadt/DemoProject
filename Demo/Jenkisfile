@@ -28,7 +28,7 @@ node {
          }
          dir('Demo'){
       
-          sh "docker build -t demoImage ."
+          sh "docker build -t demoimage ."
          }
      }
 }
@@ -37,7 +37,7 @@ node {
              expression{isUnix()}
          }
      steps {
-  sh "docker push demoImage"
+  sh "docker push demoimage"
      }
 }
     stage("Deploy to staging") {
@@ -46,7 +46,7 @@ node {
          }
      steps {
  
-          sh "docker run -p 8080:8080 demoImage"
+          sh "docker run -p 8080:8080 demoimage"
      }
 }
    

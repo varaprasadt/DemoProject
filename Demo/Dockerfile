@@ -2,6 +2,6 @@ FROM java:8
 
 EXPOSE 8080
 
-ADD Demo.jar target/Demo-0.0.1-SNAPSHOT.jar
+ADD target/Demo-0.0.1-SNAPSHOT.jar Demo.jar
 
-ENTRYPOINT ["java" ,"-xmx512m","-jar","Demo.jar"]
+ENTRYPOINT ["java" ,"-jar","Demo.jar"]
