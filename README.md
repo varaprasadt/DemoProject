@@ -15,9 +15,20 @@ This end point privides a way to get the number of projects own by a git user, w
 # Cloning:
     >git clone https://github.com/varaprasadt/DemoRepo.git
 # Build :
-   >cd to (project_home)/Demo
-   >mvn clean package
+    >cd to (project_home)/Demo
+    >mvn clean package
 # Run as Jar :
-   cd to (project_home)/Demo/target
+    cd to (project_home)/Demo/target
    >java -jar Demo-0.0.1-SNAPSHOT
 
+# Run as Docker Image :
+   cd to (project_home)/Demo
+   >docker build -t demoimage .
+   
+# Jenikins Pipeline :
+    Go to jenkins portal , select pipeline job create new pipeline. For example DemoJob
+    >Navigate to DemoJob>Configuration screen
+    Copy the Jenkins file script to Pipeline>Defination section or select Pipeline Jenikins file from scm
+    
+    run the Job.
+    
