@@ -1,9 +1,9 @@
 # DemoProject
 Telectronics Demo
 
-# About api:(/projects?username=gitUserName)
+# About api:(/projects/username)
 This end point privides a way to get the number of projects own by a git user, we need to pass the git user id as the parameter
- Sample Usage : http://localhost:8080/projects?username=varaprasadt
+ Sample Usage : http://localhost:8080/projects/varaprasadt
  
 # Local Configuration:
   # pre requisites :
