@@ -1,9 +1,23 @@
 # DemoProject
 Telectronics Demo
 
-# About api:(/projects/username)
-This end point privides a way to get the number of projects own by a git user, we need to pass the git user id as the parameter
+# About api:
+1) /projects/username
+This end point provides a way to get List of projects own by a git user, we need to pass the git user id as the parameter
  Sample Usage : http://localhost:8080/projects/varaprasadt
+ it shows project id,name  and url.
+ 
+ 
+2) /projects/username/projectId
+This end point provides a way to retieve the specific project info. like project readMe content, List of contributors to this project and number of commits so far .
+ sample Usage : http://localhost:8080/projects/varaprasadt/DemoRepo
+ 
+# Content Negotiation :
+
+This project supports content Negotiation, default it will return JSON format response, and also supports XML based response.
+you can add the Header parameter accordingly 
+    for XML Response : Accept:application/XML
+
  
 # Local Configuration:
   # pre requisites :
