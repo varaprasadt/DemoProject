@@ -46,7 +46,7 @@ node {
          }
      steps {
  
-          sh "docker run -p 8080:8080 demoimage"
+          sh "docker run -p 80:80 demoimage"
      }
 }
    

@@ -1,12 +1,29 @@
 package com.telectronics.rest;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.web.client.RestTemplate;
 
+import com.telectronics.pojo.Project;
+import com.telectronics.pojo.ProjectBasicInfo;
+
+
+
+/**
+ * @author Vara
+ *
+ *This Test cases covers end to end testing and integration testing
+ *
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class GitInfoControllerTest {
@@ -14,16 +31,18 @@ public class GitInfoControllerTest {
 	@Autowired
 	GitInfoController controller;
 
+	@Mock
+	RestTemplate restTemplate;
+
 	@Test
-	public void testWithAvailableProjects() {
-		String result = controller.getProjectsList("varaprasadt");
-		Assert.assertEquals("<h1>Number of Projects : 2<h1>", result);
-	}
-	
-	@Test
-	public void testWithNoProjects() {
-		String result = controller.getProjectsList("test");
-		Assert.assertEquals("<h1>Number of Projects : 0<h1>", result);
+	public void testGetProjects() {
+		ResponseEntity<List<ProjectBasicInfo>> res = controller.getProjects("TEST");
+		Assert.assertEquals(HttpStatus.OK, res.getStatusCode());
 	}
 
+	@Test
+	public void testGetProject() {
+		ResponseEntity<Project> res = controller.getProject("TEST", "HelloWorld");
+		Assert.assertEquals(HttpStatus.OK, res.getStatusCode());
+	}
 }

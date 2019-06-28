@@ -1,57 +1,52 @@
 package com.telectronics.pojo;
 
-public class Project {
+import java.util.List;
 
-	String name;
-	String description;
-	public String getName() {
-		return name;
+public class Project  {
+
+
+	/**
+	 * @param id
+	 * @param name
+	 * @param url
+	 * @param readMe
+	 * @param contributors
+	 * @param commits
+	 */
+	public Project( String readMe, List<String> contributors, int commits) {
+		this.readMe = readMe;
+		this.contributors = contributors;
+		this.commits = commits;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((description == null) ? 0 : description.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		Project other = (Project) obj;
-		if (description == null) {
-			if (other.description != null) {
-				return false;
-			}
-		} else if (!description.equals(other.description)) {
-			return false;
-		}
-		if (name == null) {
-			if (other.name != null) {
-				return false;
-			}
-		} else if (!name.equals(other.name)) {
-			return false;
-		}
-		return true;
-	}
+
+
+	String readMe;
+	List<String> contributors;
+	int commits;
+
 	
-	
+	public String getReadMe() {
+		return readMe;
+	}
+
+	public void setReadMe(String readMe) {
+		this.readMe = readMe;
+	}
+
+	public List<String> getContributors() {
+		return contributors;
+	}
+
+	public void setContributors(List<String> contributors) {
+		this.contributors = contributors;
+	}
+
+	public int getCommits() {
+		return commits;
+	}
+
+	public void setCommits(int commits) {
+		this.commits = commits;
+	}
+
 }
