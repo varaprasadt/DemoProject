@@ -27,9 +27,10 @@ node {
          }
      }
 }
+ 
     stage("Docker push") {
-  sh "docker push demoimage"
-}
+      sh "docker push demoimage"
+   }
     stage("Deploy to staging") {
           sh "docker run -p 80:80 demoimage"
 }
