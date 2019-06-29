@@ -38,6 +38,7 @@ you can add the Header parameter accordingly
 # Run as Docker Image :
    cd to (project_home)/Demo
    >docker build -t demoimage .
+   >docker run -p 80:80 demoimage
    
 # Jenikins Pipeline :
     Go to jenkins portal , select pipeline job create new pipeline. For example DemoJob
