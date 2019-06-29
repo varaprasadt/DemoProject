@@ -22,32 +22,16 @@ node {
    }
    
     stage("Docker build") {
-     steps {
-         when{
-             expression{isUnix()}
-         }
          dir('Demo'){
-      
           sh "docker build -t demoimage ."
          }
      }
 }
     stage("Docker push") {
-     when{
-             expression{isUnix()}
-         }
-     steps {
   sh "docker push demoimage"
-     }
 }
     stage("Deploy to staging") {
-     when{
-             expression{isUnix()}
-         }
-     steps {
- 
           sh "docker run -p 80:80 demoimage"
-     }
 }
    
 }
