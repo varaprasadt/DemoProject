@@ -33,12 +33,12 @@ you can add the Header parameter accordingly
     >mvn clean package
 # Run as Jar :
     cd to (project_home)/Demo/target
-   >java -jar Demo-0.0.1-SNAPSHOT
+    >java -jar Demo-0.0.1-SNAPSHOT
 
 # Run as Docker Image :
-   cd to (project_home)/Demo
-   >docker build -t demoimage .
-   >docker run -p 80:80 demoimage
+    cd to (project_home)/Demo
+    >docker build -t demoimage .
+    >docker run -p 80:80 demoimage
    
 # Jenikins Pipeline :
     Go to jenkins portal , select pipeline job create new pipeline. For example DemoJob
