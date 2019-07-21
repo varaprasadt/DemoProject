@@ -1,5 +1,4 @@
 # DemoProject
-Telectronics Demo
 
 # About api:
 1) /projects/username
