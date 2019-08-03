@@ -1,4 +1,4 @@
-package com.telectronics.Demo;
+package com.vara.Demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

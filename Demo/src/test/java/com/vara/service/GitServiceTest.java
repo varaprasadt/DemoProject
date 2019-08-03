@@ -1,6 +1,4 @@
-package com.telectronics.service;
-
-import static org.junit.Assert.fail;
+package com.vara.service;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -21,8 +19,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import com.telectronics.pojo.Project;
-import com.telectronics.pojo.ProjectBasicInfo;
+import com.vara.pojo.Project;
+import com.vara.pojo.ProjectBasicInfo;
 
 @RunWith(MockitoJUnitRunner.class)
 public class GitServiceTest {

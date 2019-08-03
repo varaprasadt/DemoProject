@@ -1,4 +1,4 @@
-package com.telectronics.rest;
+package com.vara.rest;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.telectronics.pojo.Project;
-import com.telectronics.pojo.ProjectBasicInfo;
-import com.telectronics.service.GitService;
+import com.vara.pojo.Project;
+import com.vara.pojo.ProjectBasicInfo;
+import com.vara.service.GitService;
 
 @RestController
 public class GitInfoController {

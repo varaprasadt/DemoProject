@@ -1,4 +1,4 @@
-package com.telectronics.pojo;
+package com.vara.pojo;
 
 import java.util.List;
 

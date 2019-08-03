@@ -1,4 +1,4 @@
-package com.telectronics.service;
+package com.vara.service;
 
 import java.util.ArrayList;
 import java.util.Base64;
@@ -15,8 +15,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.telectronics.pojo.Project;
-import com.telectronics.pojo.ProjectBasicInfo;
+import com.vara.pojo.Project;
+import com.vara.pojo.ProjectBasicInfo;
 
 @Service
 public class GitService {
